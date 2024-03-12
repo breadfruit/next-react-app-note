@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import SidebarNoteList from './SidebarNoteList'
 
 export default async function Sidebar() {
   return (
@@ -22,7 +23,7 @@ export default async function Sidebar() {
             {/* SideSearchField */}
         </section>
         <nav>
-          {/* SidebarNoteList */}
+          <SidebarNoteList />
         </nav>
       </section>
     </>

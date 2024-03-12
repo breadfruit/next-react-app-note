@@ -1,3 +1,5 @@
+import redis from "@/lib/redis";
+
 export default async function Page() {
   return (
     <div className="note--empty-state">
@@ -7,3 +9,4 @@ export default async function Page() {
     </div>
   )
 }
+
