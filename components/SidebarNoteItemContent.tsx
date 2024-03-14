@@ -20,7 +20,6 @@ interface SidebarNoteItemContentProps  {
     const selectedId = pathname?.split('/')[1] || null
   
     const [isPending] = useTransition()
-    console.log('isPending', isPending)
     const [isExpanded, setIsExpanded] = useState(false)
     const isActive = id === selectedId
   
