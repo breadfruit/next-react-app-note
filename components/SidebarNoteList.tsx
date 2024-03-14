@@ -8,7 +8,7 @@ import { NoteItem, SidebarNoteItemProps } from './types';
 export default async function NoteList({ notes }: {notes: NoteItem}) {
   const sleep = ms => new Promise((r) => setTimeout(r, ms));
   await sleep(3000)
-    const arr: Array<[string, string]>  = Object.entries(notes)
+    const arr  = Object.entries(notes)
     if (arr.length == 0) {
       return <div className="notes-empty">
         {'No notes created yet!'}
