@@ -13,7 +13,9 @@ const initialData = {
 
 export async function getAllNotes() {
     const data = await redis.hgetall("notes");
+    console.log('data', data)
     if (Object.keys(data).length == 0) {
+
       await redis.hset("notes", initialData);
     }
     return await redis.hgetall("notes")
