@@ -19,9 +19,10 @@ export async function getAllNotes() {
 }
   
 
-export async function addNote(data: Callback<number> | undefined) {
+export async function addNote(data: any) {
     const uuid = Date.now().toString();
     await redis.hset("notes", [uuid], data)
+    return uuid
 }
 
 
@@ -33,7 +34,7 @@ export async function updateNote(uuid: string, data: any) {
 export async function getNote(uuid: string) {
     return JSON.parse(await redis.hget("notes",uuid)?? '{}')
 }
-export async function delNote(uuid: string) {
+export async function delNote(uuid: any) {
     return redis.hdel("notes", uuid)
 }
 

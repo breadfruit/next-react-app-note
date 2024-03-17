@@ -19,7 +19,7 @@ export default async function NoteList({ notes }: {notes: NoteItem}) {
       {arr.map(([noteId, note]) => {
         const noteItem: NoteItem  = JSON.parse(note);
         return (
-          <SidebarNoteItem note={noteItem} noteId={noteId} />
+          <SidebarNoteItem note={noteItem} noteId={noteId} key={noteId} />
         )
     })}
     </ul>
