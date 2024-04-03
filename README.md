@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### redis
+1. 本地先安装redis。执行init-redis对数据表进行初始化
+
+```bash
+    redis-server
+```
+
+2. note.json 也可以直接导入。
+
+### 启动
 
 ```bash
 npm run dev
